@@ -1,261 +1,105 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Prathima Hospitals offers multispeciality healthcare, experienced doctors, modern facilities and 24/7 emergency care in Hyderabad.">
-<meta name="robots" content="noindex,nofollow">
-<title>Prathima Hospitals | Multispeciality Healthcare in Hyderabad</title>
-<link rel="icon" href="assets/prathima-logo-reference.png">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/home-v6.css">
-</head>
-<body>
-<!-- Inline medical icon sprite keeps the site self-contained and avoids icon-font loading failures. -->
-<svg class="v6-icon-sprite" aria-hidden="true" focusable="false">
-  <symbol id="icon-phone" viewBox="0 0 64 64"><path d="M19 9l10 7-6 12c5 8 10 13 18 18l12-6 7 10-8 7c-4 3-10 3-15 0C25 49 15 39 8 27c-3-5-3-11 0-15l7-8c1-1 2-1 4 0z"/></symbol>
-  <symbol id="icon-calendar" viewBox="0 0 64 64"><rect x="9" y="13" width="46" height="43" rx="6"/><path d="M18 8v10M46 8v10M9 25h46M18 34h8M31 34h8M18 44h8M31 44h8"/></symbol>
-  <symbol id="icon-users" viewBox="0 0 64 64"><circle cx="25" cy="22" r="8"/><circle cx="45" cy="25" r="6"/><path d="M10 50c1-11 8-16 15-16s14 5 15 16M37 49c1-7 5-11 11-11 5 0 9 3 10 9"/></symbol>
-  <symbol id="icon-doctor" viewBox="0 0 64 64"><circle cx="32" cy="18" r="8"/><path d="M18 53c1-12 6-19 14-19s13 7 14 19"/><path d="M24 35l8 8 8-8"/><circle cx="50" cy="23" r="9"/><path d="M45 23h10M50 18v10"/></symbol>
-  <symbol id="icon-medical-monitor" viewBox="0 0 64 64"><rect x="8" y="11" width="48" height="34" rx="5"/><path d="M15 29h8l4-9 7 17 5-10 4 6h6"/><path d="M25 54h14M32 45v9"/><path d="M44 19h5v5h-5z"/></symbol>
-  <symbol id="icon-care-team" viewBox="0 0 64 64"><circle cx="25" cy="22" r="7"/><circle cx="45" cy="25" r="5"/><path d="M10 52c1-10 7-16 15-16s14 6 15 16M38 50c1-6 4-10 10-10 5 0 8 3 9 8"/><path d="M41 18c3-5 9-7 14-4 5 3 5 10 0 14l-10 8-10-8c-5-4-5-11 0-14 2-1 4-1 6 0"/></symbol>
-  <symbol id="icon-tech" viewBox="0 0 64 64"><circle cx="32" cy="32" r="12"/><path d="M32 7v8M32 49v8M7 32h8M49 32h8M14 14l6 6M44 44l6 6M50 14l-6 6M20 44l-6 6"/><path d="M28 27h8v10h-8z"/></symbol>
-  <symbol id="icon-shield-check" viewBox="0 0 64 64"><path d="M32 7l21 8v16c0 13-9 22-21 27C20 53 11 44 11 31V15l21-8z"/><path d="M21 32l7 7 15-16"/></symbol>
-  <symbol id="icon-heart" viewBox="0 0 64 64"><path d="M32 54S10 41 10 25c0-9 6-15 14-15 4 0 7 2 8 6 2-4 5-6 10-6 8 0 12 6 12 15 0 16-22 29-22 29z"/><path d="M7 31h12l5-9 7 18 6-12 5 7h15"/></symbol>
-  <symbol id="icon-lungs" viewBox="0 0 64 64"><path d="M30 11v15c0 5-3 7-8 7-3 0-7 2-9 5-4 7-5 16-3 19 2 3 8 2 13-1 7-4 10-10 9-20M34 11v15c0 5 3 7 8 7 3 0 7 2 9 5 4 7 5 16 3 19-2 3-8 2-13-1-7-4-10-10-9-20M32 10v29"/></symbol>
-  <symbol id="icon-brain" viewBox="0 0 64 64"><path d="M27 11c-7-3-13 2-12 9-7 1-9 10-4 15-4 7 1 14 8 14 2 7 12 7 15 1V15c-2-2-4-3-7-4z"/><path d="M37 11c7-3 13 2 12 9 7 1 9 10 4 15 4 7-1 14-8 14-2 7-12 7-15 1V15c2-2 4-3 7-4z"/><path d="M21 21h7M19 32h8M22 43h7M43 21h-7M45 32h-8M42 43h-7"/></symbol>
-  <symbol id="icon-bone" viewBox="0 0 64 64"><path d="M18 18c-4 0-7-3-7-7 0-3 2-6 5-7 4-1 8 2 9 5l16 28c2-1 4-2 6-2 4 0 7 3 7 7 0 3-2 6-5 7-4 1-8-2-9-5L24 16c-2 1-4 2-6 2z"/></symbol>
-  <symbol id="icon-stomach" viewBox="0 0 64 64"><path d="M24 9c0 8 1 13 6 15 6 2 13 1 16 7 3 6 1 16-4 20-5 4-13 2-17-3-4-5-5-12-3-18 2-5 1-8-2-13-2-4 0-7 4-8z"/><path d="M32 21c-3 5-4 10-2 15 1 4 4 6 8 6"/></symbol>
-  <symbol id="icon-kidney" viewBox="0 0 64 64"><path d="M27 10c-10-2-17 5-17 17 0 10 5 21 14 24 8 2 14-4 14-12 0-5-3-8-7-10 5-5 5-17-4-19z"/><path d="M38 25c7 3 10 8 10 14 0 7-4 12-10 12"/></symbol>
-  <symbol id="icon-uterus" viewBox="0 0 64 64"><path d="M21 13v13c0 7 4 11 11 11s11-4 11-11V13M15 15c0 7 3 11 8 13M49 15c0 7-3 11-8 13M32 37v17M23 15c-5-1-8 1-10 5M41 15c5-1 8 1 10 5"/></symbol>
-  <symbol id="icon-baby" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M23 27h1M40 27h1M24 39c5 5 11 5 16 0"/><path d="M18 13c2-7 10-10 16-5M46 13c-2-7-10-10-16-5"/></symbol>
-  <symbol id="icon-stethoscope" viewBox="0 0 64 64"><path d="M17 10v17c0 9 6 15 15 15s15-6 15-15V10M17 17h7M47 17h-7M32 42v6c0 7 5 11 11 11 7 0 11-4 11-11v-3"/><circle cx="54" cy="40" r="4"/></symbol>
-  <symbol id="icon-ribbon" viewBox="0 0 64 64"><path d="M20 10c8 5 13 11 16 19 3-8 8-14 16-19-1 12-3 20-10 27l6 17-12-8-12 8 6-17c-7-7-9-15-10-27z"/></symbol>
-  <symbol id="icon-bed" viewBox="0 0 64 64"><path d="M9 48V20M9 39h46v9M15 35V23h15c5 0 9 4 9 9v3M39 35h16v4M15 48v8M49 48v8"/></symbol>
-  <symbol id="icon-location" viewBox="0 0 64 64"><path d="M32 57S14 39 14 26C14 16 22 8 32 8s18 8 18 18c0 13-18 31-18 31z"/><circle cx="32" cy="26" r="6"/></symbol>
-  <symbol id="icon-clock" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23"/><path d="M32 19v14l9 6"/></symbol>
-</svg>
-<header class="v6-site-header home-ref-header">
-  <div class="container v6-header-row">
-    <a class="v6-brand" href="./" aria-label="Prathima Hospitals home"><img src="assets/prathima-logo-reference.png" alt="Prathima Hospitals"></a>
-    <nav class="v6-nav" aria-label="Primary navigation">
-      <a class="active" href="./">Home</a>
-      <div class="v6-specialty-menu">
-        <button type="button" aria-expanded="false">Specialities <span class="ref-chevron">⌄</span></button>
-        <div class="v6-drop">
-          <div class="v6-drop-title">Explore specialities</div>
-          <div class="v6-cardio-sub">
-            <button class="v6-cardio-toggle" type="button" aria-expanded="false"><span>Cardiology</span><span>›</span></button>
-            <div class="v6-cardio-submenu">
-              <a href="specialities/cardiology/cardiologist/">Cardiologist</a>
-              <a href="specialities/cardiology/cardiology-hospital/">Cardiology Hospital</a>
-              <a href="specialities/cardiology/cardiac-surgery/">Cardiac Surgery</a>
-              <a href="specialities/cardiology/cardiology-kukatpally/">Cardiology in Kukatpally</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore Prathima Hospitals specialties and the Cardiology pathways available in V1."><meta name="robots" content="noindex,nofollow"><title>Specialities | Prathima Hospitals</title><link rel="icon" href="../assets/prathima-logo-reference.png"><link rel="stylesheet" href="../assets/site.css"></head><body>
+<header class="site-header">
+  <div class="header-shell">
+    <div class="container header-main">
+      <a class="brand" href="../" aria-label="Prathima Hospitals home">
+        <img class="logo" src="../assets/prathima-logo-reference.png" alt="Prathima Hospitals">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../">Home</a>
+        <div class="nav-drop">
+          <button type="button" aria-haspopup="true" aria-expanded="false" data-specialty-toggle>
+            <span>Specialities</span><span class="chevron">⌄</span>
+          </button>
+          <div class="dropdown mega-drop" role="menu">
+            <div class="dropdown-heading">Our Specialities</div>
+            <div class="nested-drop">
+              <button type="button" class="nested-trigger" aria-haspopup="true" aria-expanded="false" data-cardio-toggle>
+                <span>Cardiology</span><span class="nested-arrow">›</span>
+              </button>
+              <div class="nested-menu" role="menu">
+                <a href="../specialities/cardiology/cardiologist/">Cardiologist</a>
+                <a href="../specialities/cardiology/cardiology-hospital/">Cardiology Hospital</a>
+                <a href="../specialities/cardiology/cardiac-surgery/">Cardiac Surgery</a>
+                <a href="../specialities/cardiology/cardiology-kukatpally/">Cardiology in Kukatpally</a>
+              </div>
             </div>
+            <div class="dropdown-heading secondary">More Specialities</div>
+            <a href="../specialities/pulmonology/">Pulmonology</a>
+            <a href="../specialities/pediatrics/">Pediatrics</a>
+            <a href="../specialities/gynecology/">Gynecology</a>
+            <a href="../specialities/neurology/">Neurology</a>
+            <a href="../specialities/orthopaedics/">Orthopaedics</a>
           </div>
-          <div class="v6-drop-title more">More specialities</div>
-          <a href="specialities/pulmonology/">Pulmonology</a>
-          <a href="specialities/pediatrics/">Pediatrics</a>
-          <a href="specialities/gynecology/">Gynecology</a>
-          <a href="specialities/neurology/">Neurology</a>
-          <a href="specialities/orthopaedics/">Orthopaedics</a>
         </div>
+        <a href="../about-us/">About Us</a>
+        <a href="../contact-us/">Contact Us</a>
+      </nav>
+
+      <div class="header-actions" aria-label="Hospital quick actions">
+        <a class="header-phone" href="tel:04043454345" aria-label="24/7 emergency 040 4345 4345">
+          <span class="phone-mark">24/7</span>
+          <span><b>Emergency</b><small>040 4345 4345</small></span>
+        </a>
+        <a class="header-book" href="../contact-us/#appointment">Book Appointment</a>
       </div>
-      <a href="#doctors">Our Doctors</a>
-      <a href="about-us/">About Us</a>
-      <a href="contact-us/">Contact Us</a>
-    </nav>
-    <div class="v6-header-actions ref-header-actions">
-      <a class="ref-emergency" href="tel:7337336600"><span class="ref-action-icon ref-action-icon-siren" aria-hidden="true"><img src="assets/icon-emergency-siren.png" alt=""></span><span><b>24/7 Emergency</b><small>733 733 6600</small></span></a>
-      <a class="v6-book ref-book" href="contact-us/#appointment"><span class="ref-action-icon ref-action-icon-calendar" aria-hidden="true"><img src="assets/icon-calendar-appointment.png" alt=""></span>Book Appointment</a>
+
+      <button class="menu-btn" data-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
-    <button class="v6-menu-btn" type="button" data-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="v6-mobile-nav" data-mobile-nav>
-    <a href="./">Home</a>
-    <div class="v6-mobile-group"><button class="v6-mobile-group-toggle" type="button" data-mobile-specialties aria-expanded="false">Specialities <span>⌄</span></button>
-      <div class="v6-mobile-group-content">
-        <div class="v6-mobile-subgroup"><button class="v6-mobile-group-toggle" type="button" data-mobile-cardio aria-expanded="false">Cardiology <span>⌄</span></button>
-          <div class="v6-mobile-subgroup-content"><a href="specialities/cardiology/cardiologist/">Cardiologist</a><a href="specialities/cardiology/cardiology-hospital/">Cardiology Hospital</a><a href="specialities/cardiology/cardiac-surgery/">Cardiac Surgery</a><a href="specialities/cardiology/cardiology-kukatpally/">Cardiology in Kukatpally</a></div>
+
+  <div class="nav-mobile" data-mobile-nav>
+    <a href="../">Home</a>
+    <div class="mobile-group">
+      <button class="mobile-group-toggle" type="button" data-mobile-specialties aria-expanded="false">Specialities <span>⌄</span></button>
+      <div class="mobile-group-content">
+        <div class="mobile-subgroup">
+          <button class="mobile-group-toggle nested" type="button" data-mobile-cardio aria-expanded="false">Cardiology <span>⌄</span></button>
+          <div class="mobile-subgroup-content">
+            <a href="../specialities/cardiology/cardiologist/">Cardiologist</a>
+            <a href="../specialities/cardiology/cardiology-hospital/">Cardiology Hospital</a>
+            <a href="../specialities/cardiology/cardiac-surgery/">Cardiac Surgery</a>
+            <a href="../specialities/cardiology/cardiology-kukatpally/">Cardiology in Kukatpally</a>
+          </div>
         </div>
-        <a href="specialities/pulmonology/">Pulmonology</a><a href="specialities/pediatrics/">Pediatrics</a><a href="specialities/gynecology/">Gynecology</a><a href="specialities/neurology/">Neurology</a><a href="specialities/orthopaedics/">Orthopaedics</a>
+        <a class="mobile-external" href="../specialities/pulmonology/">Pulmonology</a>
+        <a class="mobile-external" href="../specialities/pediatrics/">Pediatrics</a>
+        <a class="mobile-external" href="../specialities/gynecology/">Gynecology</a>
+        <a class="mobile-external" href="../specialities/neurology/">Neurology</a>
+        <a class="mobile-external" href="../specialities/orthopaedics/">Orthopaedics</a>
       </div>
     </div>
-    <a href="#doctors">Our Doctors</a><a href="about-us/">About Us</a><a href="contact-us/">Contact Us</a><a class="v6-mobile-book" href="contact-us/#appointment"><img src="assets/icon-calendar-appointment.png" alt="">Book Appointment</a>
+    <a href="../about-us/">About Us</a>
+    <a href="../contact-us/">Contact Us</a>
+    <a href="../contact-us/#appointment" class="mobile-book">Book Appointment</a>
   </div>
-</header>
-<main>
-<section class="v6-home-hero home-ref-hero">
-  <div class="home-ref-scene" aria-hidden="true">
-    <div class="home-ref-reference-image"></div>
-    <div class="home-ref-cover"></div>
-  </div>
-  <div class="container home-ref-content">
-    <div class="home-ref-copy">
-      <div class="home-ref-eyebrow">MULTI-SPECIALTY HOSPITAL IN KUKATPALLY</div>
-      <h1>Advanced Care for a<br><span>Healthier Tomorrow</span></h1>
-      <p>At Prathima Hospitals, we bring together expert doctors, advanced medical technology and compassionate care for you and your family.</p>
-      <div class="home-ref-actions">
-        <a class="home-ref-btn home-ref-btn-primary" href="contact-us/#appointment"><span class="home-ref-img-icon home-ref-img-calendar"><img src="assets/icon-calendar-appointment.png" alt=""></span>Book an Appointment <span class="home-ref-arrow">→</span></a>
-        <a class="home-ref-btn home-ref-btn-secondary" href="tel:7337336600"><span class="home-ref-img-icon home-ref-img-call"><img src="assets/icon-call-red.png" alt=""></span>Call 733 733 6600</a>
+</header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="../">Home</a> / Specialities</div><div style="margin-top:26px"><div class="eyebrow">Specialities</div><h1>Care organised around your needs.</h1><p>Cardiology is the first complete specialty experience on the new site. Other specialties remain connected to their existing Prathima Hospitals pages until their new dedicated journeys are ready.</p></div></div></section><section class="section"><div class="container"><div class="eyebrow">Available now</div><h2 class="section-title">Cardiology</h2><p class="section-copy">Explore the four focused Cardiology pathways.</p><div class="cardio-links" style="margin-top:24px"><div class="cardio-link"><div class="kicker">Consultation</div><h3>Cardiologist</h3><p>For cardiologist and heart consultation intent.</p><a href="../specialities/cardiology/cardiologist/">Explore →</a></div><div class="cardio-link"><div class="kicker">Hospital care</div><h3>Cardiology Hospital</h3><p>For cardiology hospital and cardiac care facility intent.</p><a href="../specialities/cardiology/cardiology-hospital/">Explore →</a></div><div class="cardio-link"><div class="kicker">Surgical care</div><h3>Cardiac Surgery</h3><p>For cardiac surgery consultation and treatment intent.</p><a href="../specialities/cardiology/cardiac-surgery/">Explore →</a></div><div class="cardio-link"><div class="kicker">Kukatpally</div><h3>Cardiology in Kukatpally</h3><p>For local cardiology and Kukatpally intent.</p><a href="../specialities/cardiology/cardiology-kukatpally/">Explore →</a></div></div></div></section><section class="section" style="background:var(--soft)"><div class="container"><div class="eyebrow">Coming in future iterations</div><h2 class="section-title">More specialties are already accounted for.</h2><p class="section-copy">The links below temporarily take patients to the corresponding existing Prathima Hospitals pages.</p><div class="card-grid" style="margin-top:25px"><a class="card specialty-card" href="../specialities/pulmonology/"><div class="icon">↗</div><h3>Pulmonology</h3><p>Existing Prathima Hospitals pulmonology information.</p><span class="arrow">Open existing Prathima page →</span></a><a class="card specialty-card" href="../specialities/pediatrics/"><div class="icon">↗</div><h3>Pediatrics</h3><p>Existing Prathima Hospitals pediatric information.</p><span class="arrow">Open existing Prathima page →</span></a><a class="card specialty-card" href="../specialities/gynecology/"><div class="icon">↗</div><h3>Gynecology</h3><p>Existing Prathima Hospitals gynecology information.</p><span class="arrow">Open existing Prathima page →</span></a><a class="card specialty-card" href="../specialities/neurology/"><div class="icon">↗</div><h3>Neurology</h3><p>Existing Prathima Hospitals neurology information.</p><span class="arrow">Open existing Prathima page →</span></a><a class="card specialty-card" href="../specialities/orthopaedics/"><div class="icon">↗</div><h3>Orthopaedics</h3><p>Existing Prathima Hospitals orthopaedics information.</p><span class="arrow">Open existing Prathima page →</span></a></div></div></section></main>
+<footer>
+  <div class="container footer-top">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/prathima-logo-reference.png" alt="Prathima Hospitals">
+        <p>Specialist-led healthcare, thoughtful patient support, and clear pathways across Prathima Hospitals.</p>
       </div>
-      <div class="home-ref-proof-row">
-        <div class="home-ref-proof"><span class="home-ref-icon"><svg><use href="#icon-doctor"></use></svg></span><span><b>Expert Doctors</b><small>Across Specialities</small></span></div>
-        <div class="home-ref-divider"></div>
-        <div class="home-ref-proof"><span class="home-ref-icon"><svg><use href="#icon-medical-monitor"></use></svg></span><span><b>Advanced</b><small>Medical Technology</small></span></div>
-        <div class="home-ref-divider"></div>
-        <div class="home-ref-proof"><span class="home-ref-icon"><svg><use href="#icon-shield-check"></use></svg></span><span><b>NABH</b><small>Accredited Hospital</small></span></div>
-      </div>
-    </div>
-    <div class="home-ref-nabh"><img src="assets/nabh-logo-exact.png" alt="NABH Accredited"><span><b>NABH Accredited</b><small>Quality Care. Trusted by Thousands.</small></span></div>
-  </div>
-</section>
-<section class="v6-glance-section" aria-labelledby="hospital-glance-title">
-  <div class="container">
-    <div class="v6-glance-head">
       <div>
-        <div class="v6-eyebrow">HOSPITAL AT A GLANCE</div>
-        <h2 id="hospital-glance-title">A quick look at Prathima Hospitals.</h2>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="../">Home</a><a href="../specialities/">Specialities</a><a href="../about-us/">About Us</a><a href="../contact-us/">Contact Us</a>
+        </div>
       </div>
-      <p>Key facts that help you understand our hospital before you explore doctors, facilities and specialities.</p>
-    </div>
-    <div class="v6-glance-grid">
-      <div class="v6-glance-card"><span class="v6-glance-icon"><svg><use href="#icon-bed"></use></svg></span><span><b>250+ Beds</b><small>Advanced inpatient facility</small></span></div>
-      <div class="v6-glance-card"><span class="v6-glance-icon"><svg><use href="#icon-location"></use></svg></span><span><b>2 Locations</b><small>Kukatpally &amp; Kachiguda</small></span></div>
-      <div class="v6-glance-card"><span class="v6-glance-icon v6-glance-img"><img src="assets/icon-emergency-siren.png" alt=""></span><span><b>24/7 Emergency</b><small>Round-the-clock emergency care</small></span></div>
-      <div class="v6-glance-card"><span class="v6-glance-icon"><svg><use href="#icon-doctor"></use></svg></span><span><b>Specialist Doctors</b><small>Multiple care disciplines</small></span></div>
-      <div class="v6-glance-card"><span class="v6-glance-icon"><svg><use href="#icon-shield-check"></use></svg></span><span><b>NABH Accredited</b><small>Quality-focused hospital care</small></span></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="v6-home-section" id="specialities">
- <div class="container"><div class="v6-section-head"><div><div class="v6-eyebrow">OUR SPECIALITIES</div><h2>Find the care area you need.</h2><p>Explore our major care areas and follow the specialty pathway that matches your healthcare needs.</p></div><a class="v6-link" href="specialities/">View all specialities →</a></div>
-  <div class="v6-specialty-grid">
-   <a class="v6-specialty-card simple" href="specialities/cardiology/"><div class="v6-specialty-icon"><svg><use href="#icon-heart"></use></svg></div><h3>Cardiology</h3><p>Heart and cardiovascular consultations and care.</p><span class="v6-link">Explore →</span></a>
-   <a class="v6-specialty-card simple" href="specialities/orthopaedics/"><div class="v6-specialty-icon"><svg><use href="#icon-bone"></use></svg></div><h3>Orthopaedics</h3><p>Specialist bone and joint care.</p><span class="v6-link">Explore →</span></a>
-   <a class="v6-specialty-card simple" href="specialities/neurology/"><div class="v6-specialty-icon"><svg><use href="#icon-brain"></use></svg></div><h3>Neurology</h3><p>Neurological consultations and care.</p><span class="v6-link">Explore →</span></a>
-   <a class="v6-specialty-card simple" href="specialities/gynecology/"><div class="v6-specialty-icon"><svg><use href="#icon-uterus"></use></svg></div><h3>Obstetrics &amp; Gynaecology</h3><p>Women-focused specialist care.</p><span class="v6-link">Explore →</span></a>
-   <a class="v6-specialty-card simple" href="specialities/pediatrics/"><div class="v6-specialty-icon"><svg><use href="#icon-baby"></use></svg></div><h3>Paediatrics</h3><p>Child and family-focused care.</p><span class="v6-link">Explore →</span></a>
-   <a class="v6-specialty-card simple" href="specialities/pulmonology/"><div class="v6-specialty-icon"><svg><use href="#icon-lungs"></use></svg></div><h3>Pulmonology</h3><p>Respiratory and pulmonary care.</p><span class="v6-link">Explore →</span></a>
-   <div class="v6-specialty-card simple"><div class="v6-specialty-icon"><svg><use href="#icon-stomach"></use></svg></div><h3>Gastroenterology</h3><p>Digestive health services.</p><span class="v6-link">Current-site pathway ↗</span></div>
-   <div class="v6-specialty-card simple"><div class="v6-specialty-icon"><svg><use href="#icon-kidney"></use></svg></div><h3>Urology</h3><p>Urology consultations and treatment pathways.</p><span class="v6-link">Current-site pathway ↗</span></div>
-  </div>
- </div>
-</section>
-
-
-<section class="v6-home-section v6-doctors-section" id="doctors">
- <div class="container">
-  <div class="v6-section-head">
-   <div>
-    <div class="v6-eyebrow">OUR DOCTORS</div>
-    <h2>Meet the specialists behind the care.</h2>
-    <p>Experienced consultants across key specialties at Prathima Hospitals, helping patients find the right care team.</p>
-   </div>
-   <a class="v6-link" href="https://prathimahospitals.com/kukatpally-unit/" target="_blank" rel="noopener">View Kukatpally doctor team ↗</a>
-  </div>
-  <div class="v6-doctor-grid">
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-harsha-vardhan-reddy-home.webp" alt="Dr. K. Harsha Vardhan Reddy, Consultant Interventional Cardiologist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">CARDIOLOGY</div><h3>Dr. K. Harsha Vardhan Reddy</h3><b>Consultant Interventional Cardiologist</b><p>MBBS, MD (General Medicine), DM (Cardiology)</p><a href="specialities/cardiology/cardiologist/">View Cardiology →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-harshini-errabelli.webp" alt="Dr. Harshini Errabelli, Interventional Pulmonologist and International Sleep Disorders Specialist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">PULMONOLOGY</div><h3>Dr. Harshini Errabelli</h3><b>Interventional Pulmonologist &amp; International Sleep Disorders Specialist</b><p>MD (Respiratory, Critical Care &amp; Sleep Medicine), Fellowship in Interventional Pulmonology (Malaysia), 2nd Level Master in Interventional Pulmonology (Italy)</p><a href="specialities/pulmonology/">View Pulmonology →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-kynaveen-kumar.webp" alt="Dr. K. Y. Naveen Kumar, Chief Anesthesiologist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">ANAESTHESIA</div><h3>Dr. K. Y. Naveen Kumar</h3><b>Chief Anesthesiologist</b><p>MBBS, MD – FICCM, FIPM</p><a href="specialities/">View speciality →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-madan-mohan-reddy.webp" alt="Dr. N. Madan Mohan Reddy, Consultant and Head of Emergency Medicine" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">EMERGENCY MEDICINE</div><h3>Dr. N. Madan Mohan Reddy</h3><b>Consultant &amp; Head, Dept. of Emergency Medicine</b><p>MBBS, DEM, (MRCEM) – Emergency Medicine</p><a href="specialities/">View speciality →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-yadati-santosh-deepthi.webp" alt="Dr. Yadati Santosh Deepthi, Consultant Neurophysician" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">NEUROLOGY</div><h3>Dr. Yadati Santosh Deepthi</h3><b>Consultant Neurophysician</b><p>MBBS, MD, DM (NIMS)</p><a href="specialities/neurology/">View Neurology →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-diwakar-naidu-gajjala.webp" alt="Dr. Diwakar Naidu Gajjala, Consultant Nephrologist and Renal Transplant Physician" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">NEPHROLOGY</div><h3>Dr. Diwakar Naidu Gajjala</h3><b>Consultant Nephrologist &amp; Renal Transplant Physician</b><p>MBBS, MD General Medicine, DM Nephrology</p><a href="specialities/">View speciality →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-b-madhavi.webp" alt="Dr. B. Madhavi, Chief Obstetrician and Gynaecologist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">OBSTETRICS &amp; GYNAECOLOGY</div><h3>Dr. B. Madhavi</h3><b>Chief Obstetrician &amp; Gynaecologist | Senior Laparoscopic Surgeon</b><p>MBBS, MD (OBG)</p><a href="specialities/gynecology/">View Gynaecology →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-addanki-veeranna.webp" alt="Dr. Addanki Veeranna, Consultant General Physician and Diabetologist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">GENERAL MEDICINE</div><h3>Dr. Addanki Veeranna</h3><b>Consultant General Physician (Diabetologist)</b><p>MBBS, MD, General Medicine</p><a href="specialities/">View speciality →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-ramprasad-vadisetty.webp" alt="Dr. Ramprasad Vadisetty, Consultant Pediatrician and Neonatologist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">PAEDIATRICS</div><h3>Dr. Ramprasad Vadisetty</h3><b>Consultant Pediatrician &amp; Neonatologist</b><p>MBBS, MD (Paediatrics), Fellowship in Neonatology (NNF)</p><a href="specialities/pediatrics/">View Paediatrics →</a></div>
-   </article>
-   <article class="v6-doctor-card">
-    <div class="v6-doctor-photo"><img src="assets/dr-naveen-paul.webp" alt="Dr. Naveen Paul, Senior Consultant Urologist and Andrologist" loading="lazy" decoding="async"></div>
-    <div class="v6-doctor-content"><div class="v6-eyebrow">UROLOGY</div><h3>Dr. Naveen Paul</h3><b>Senior Consultant Urologist &amp; Andrologist</b><p>MBBS, MS, M.Ch (Urology)</p><a href="specialities/">View Urology →</a></div>
-   </article>
-   <article class="v6-doctor-card v6-doctor-directory">
-    <div class="directory-number">+</div><h3>More specialists at Kukatpally</h3><p>Explore the wider consultant team, doctor profiles and appointment information from Prathima Hospitals.</p><a href="https://prathimahospitals.com/kukatpally-unit/" target="_blank" rel="noopener">Meet the full doctor team ↗</a>
-   </article>
-  </div>
- </div>
-</section>
-
-<section class="v6-home-section v6-why-prathima-section" id="why-prathima">
-  <div class="container v6-why-prathima-wrap">
-    <div class="v6-why-head">
-      <div class="v6-eyebrow">WHY PRATHIMA HOSPITALS</div>
-      <h2>Information that empowers your healthcare journey.</h2>
-    </div>
-    <div class="v6-why-grid">
-      <article class="v6-why-card is-red">
-        <div class="v6-why-top"><span>01</span><b>INTEGRATED CARE</b><i aria-hidden="true"></i></div>
-        <h3>Multi-Specialty Excellence</h3>
-        <p>Seamlessly bridging diverse medical disciplines under one roof to provide holistic, coordinated healing.</p>
-      </article>
-      <article class="v6-why-card is-navy">
-        <div class="v6-why-top"><span>02</span><b>CLINICAL LEADERSHIP</b><i aria-hidden="true"></i></div>
-        <h3>Renowned Medical Experts</h3>
-        <p>Distinguished senior consultants and surgeons dedicated to evidence-based and compassionate treatment.</p>
-      </article>
-      <article class="v6-why-card is-red">
-        <div class="v6-why-top"><span>03</span><b>INFRASTRUCTURE</b><i aria-hidden="true"></i></div>
-        <h3>250+ Bed Advanced Facility</h3>
-        <p>Equipped with state-of-the-art modular OTs, advanced ICUs, and modern inpatient recovery rooms.</p>
-      </article>
-      <article class="v6-why-card is-navy">
-        <div class="v6-why-top"><span>04</span><b>CRITICAL CARE</b><i aria-hidden="true"></i></div>
-        <h3>24/7 Emergency Readiness</h3>
-        <p>Round-the-clock trauma and emergency response teams standing by for immediate, life-saving interventions.</p>
-      </article>
-      <article class="v6-why-card is-red">
-        <div class="v6-why-top"><span>05</span><b>TECHNOLOGY</b><i aria-hidden="true"></i></div>
-        <h3>Advanced Diagnostics</h3>
-        <p>High-precision imaging, advanced Cath Labs, and 2D Echo units ensuring rapid and accurate diagnosis.</p>
-      </article>
-      <article class="v6-why-card is-navy">
-        <div class="v6-why-top"><span>06</span><b>ASSISTANCE</b><i aria-hidden="true"></i></div>
-        <h3>Cashless Insurance Support</h3>
-        <p>Dedicated coordinators providing hassle-free insurance claims processing and transparent billing.</p>
-      </article>
+      <div>
+        <h3>Cardiology</h3>
+        <div class="footer-links">
+          <a href="../specialities/cardiology/cardiologist/">Cardiologist</a>
+          <a href="../specialities/cardiology/cardiology-hospital/">Cardiology Hospital</a>
+          <a href="../specialities/cardiology/cardiac-surgery/">Cardiac Surgery</a>
+          <a href="../specialities/cardiology/cardiology-kukatpally/">Cardiology in Kukatpally</a>
+        </div>
+      </div>
     </div>
   </div>
-</section>
-
-<section class="v6-home-section" style="padding-top:0"><div class="container"><div class="v6-section-head"><div><div class="v6-eyebrow">PATIENT FACILITIES</div><h2>A more comfortable care environment.</h2><p>Standard rooms and optional premium room facilities are presented separately so patients can understand the difference.</p></div></div><div class="v6-facility-grid"><article class="v6-facility-card"><img src="assets/patient-standard-room-user.png" alt="Standard room at Prathima Hospitals" loading="lazy"><div><div class="v6-eyebrow">STANDARD</div><h3>Comfortable standard rooms</h3><p>Practical accommodation for regular hospital stays.</p></div></article><article class="v6-facility-card"><img src="assets/patient-suite-room-user.png" alt="Suite room and premium facility at Prathima Hospitals" loading="lazy"><div><div class="v6-eyebrow">OPTIONAL UPGRADE</div><h3>Suite rooms &amp; premium facilities</h3><p>Higher-comfort options for patients who choose an upgraded stay.</p></div></article></div></div></section>
-
-<section class="v6-home-section v6-review-section"><div class="container"><div class="v6-section-head"><div><div class="v6-eyebrow">GOOGLE REVIEWS</div><h2>What patients highlight on Google.</h2><p>These are short review highlights from the current Kukatpally Google Business Profile listing.</p></div><a class="v6-link" href="https://www.google.com/maps/search/?api=1&amp;query=Prathima+Hospitals+Kukatpally" target="_blank" rel="noopener">View Google reviews ↗</a></div><div class="v6-review-grid"><article class="v6-review"><div class="v6-review-mark">“</div><p>Very nice experience. Overall staff and doctor service was good, highly recommend.</p><small>Google review highlight</small></article><article class="v6-review"><div class="v6-review-mark">“</div><p>Doctors and hospital staff attended me with patience and gave good attention.</p><small>Google review highlight</small></article><article class="v6-review"><div class="v6-review-mark">“</div><p>Very well maintained hygienic rooms, quick help and support from nursing staff.</p><small>Google review highlight</small></article></div><div class="v6-google-row"><span class="v6-google-g">G</span><strong>4.3</strong><span>2,539 reviews on the current Google Business Profile listing</span></div></div></section>
-
-<section class="v6-home-section"><div class="container"><div class="v6-section-head"><div><div class="v6-eyebrow">OUR LOCATIONS</div><h2>Reach Prathima Hospitals in Hyderabad.</h2></div></div><div class="v6-location-grid"><article class="v6-location-card featured v6-location-with-image"><img class="v6-location-photo" src="assets/prathima-hospital-kukatpally-user.webp" alt="Prathima Hospitals Kukatpally" loading="lazy"><div class="v6-location-copy"><div class="v6-eyebrow">KUKATPALLY</div><h3>Prathima Hospitals, Kukatpally</h3><p>Plot No 27, Street No 1, Jal Vayu Vihar Rd, opposite Arjun Theatre, Hyderabad, Telangana 500072.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Prathima+Hospitals+Kukatpally" target="_blank" rel="noopener">Get Directions ↗</a></div></article><article class="v6-location-card featured v6-location-with-image"><img class="v6-location-photo" src="assets/prathima-hospital-kachiguda-user.webp" alt="Prathima Hospitals Kachiguda" loading="lazy"><div class="v6-location-copy"><div class="v6-eyebrow">KACHIGUDA</div><h3>Prathima Hospitals, Kachiguda</h3><p>3/4/3, Kachiguda Station Road, Barkatpura, Kachiguda, Hyderabad, Telangana 500027.</p><a href="https://prathimahospitals.com/branch-kachiguda" target="_blank" rel="noopener">View Kachiguda information ↗</a></div></article></div></div></section>
-
-<section class="v6-cta-band"><div class="container v6-cta-layout"><div><div class="v6-eyebrow" style="color:#f09ca6">TAKE THE NEXT STEP</div><h2>Find your specialty. Meet your doctor. Book your appointment.</h2><p>A simpler digital front door to Prathima Hospitals.</p></div><div class="v6-cta-actions"><a class="v6-btn v6-btn-white" href="contact-us/#appointment">Book Appointment</a><a class="v6-btn v6-btn-outline-white" href="tel:7337336600">Call 733 733 6600</a></div></div></section>
-</main>
-<footer class="v6-footer"><div class="container v6-footer-grid"><div class="v6-footer-brand"><img src="assets/prathima-logo-reference.png" alt="Prathima Hospitals"><p>Specialist-led multispeciality healthcare with clear patient pathways and patient-focused support.</p><div class="v6-footer-nabh"><img src="assets/nabh-logo-exact.png" alt="NABH accredited"><span>NABH Accredited Hospital</span></div></div><div><h3>Quick Links</h3><a href="./">Home</a><a href="specialities/">Specialities</a><a href="about-us/">About Us</a><a href="contact-us/">Contact Us</a></div><div><h3>Cardiology</h3><a href="specialities/cardiology/cardiologist/">Cardiologist</a><a href="specialities/cardiology/cardiology-hospital/">Cardiology Hospital</a><a href="specialities/cardiology/cardiac-surgery/">Cardiac Surgery</a><a href="specialities/cardiology/cardiology-kukatpally/">Cardiology in Kukatpally</a></div><div><h3>Contact</h3><a href="tel:7337336600">733 733 6600</a><a href="tel:04043454345">040 4345 4345 · Emergency</a><a href="mailto:info@prathimahospitals.com">info@prathimahospitals.com</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Prathima+Hospitals+Kukatpally" target="_blank" rel="noopener">Kukatpally · Directions ↗</a></div></div><div class="v6-footer-bottom"><div class="container">© Prathima Hospitals · All Rights Reserved · Staging / noindex</div></div></footer>
-<div class="v6-mobile-sticky"><a href="tel:7337336600"><b>Call</b><span>733 733 6600</span></a><a href="https://wa.me/917337336600" target="_blank" rel="noopener"><b>WhatsApp</b><span>Chat</span></a><a href="contact-us/#appointment"><b>Book</b><span>Appointment</span></a></div>
-<script src="assets/site.js"></script>
-
-</body>
-</html>
+  <div class="container footer-bottom">© Prathima Hospitals. All Rights Reserved. <span>Staging / noindex</span></div>
+</footer>
+<div class="mobile-sticky"><a href="tel:7337336600">Call<br>733 733 6600</a><a href="https://wa.me/917337336600" target="_blank" rel="noopener">WhatsApp<br>Chat</a><a href="../contact-us/#appointment">Book<br>Appointment</a></div>
+<script src="../assets/site.js"></script></body></html>
