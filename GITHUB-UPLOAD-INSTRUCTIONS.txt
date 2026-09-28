@@ -1,0 +1,29 @@
+PRATHIMA HOSPITALS — GITHUB PAGES UPLOAD
+
+1. Extract this ZIP on your computer.
+2. Open the extracted folder.
+3. Upload EVERYTHING INSIDE this folder directly into the ROOT of your GitHub repository.
+4. The repository root must contain index.html and the assets folder side-by-side.
+
+CORRECT:
+  index.html
+  assets/
+  about-us/
+  contact-us/
+  specialities/
+  .nojekyll
+
+INCORRECT:
+  prathima-site/index.html   (when prathima-site itself is nested inside the repository)
+
+5. In GitHub: Settings → Pages → Deploy from a branch → select your main branch and /(root).
+6. Wait for GitHub Pages to publish the site.
+
+IMPORTANT:
+- Do not upload the ZIP file itself.
+- Do not move the assets folder.
+- Keep all folder names and paths unchanged.
+- The project is prepared for a project URL such as:
+  https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
+
+This build uses relative asset paths and includes GitHub-compatible fallback redirect pages for temporary specialty links.
